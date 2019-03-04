@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "name": "angular-seo",
+    "builds": [
+      { "src": "api/index.js", "use": "@now/node" },
+      { "src": "*.html", "use": "@now/static" },
+      { "src": "*.js", "use": "@now/static" },
+      { "src": "*.css", "use": "@now/static" },
+      { "src": "*.ico", "use": "@now/static" }
+    ],
+    "routes": [{ "src": "api/(?<id>[^/]+)$", "methods": ["GET"] }]
+  }
+  
